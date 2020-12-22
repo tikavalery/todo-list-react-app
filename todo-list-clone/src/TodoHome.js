@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TodoLi from "./TodoLi";
 import NewTodoForm from "./NewTodoForm";
 import uniqueId from './helpers';
+import "./TodoHome.css";
 
 
 class TodoHome extends Component{
@@ -9,8 +10,8 @@ class TodoHome extends Component{
         super(props)
         this.state = {
             todos:[
-                { todoItem: "Exercise",id:uniqueId()},
-                {todoItem: "Learn Javascript",id:uniqueId()}
+                // { todoItem: "Exercise",id:uniqueId()},
+                // {todoItem: "Learn Javascript",id:uniqueId()}
               ]
         }
         this.addItem = this.addItem.bind(this)

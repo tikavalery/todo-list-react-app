@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./NewTodoForm.css"
 
 class NewTodoForm extends Component {
     constructor(props) {
@@ -27,8 +28,8 @@ class NewTodoForm extends Component {
      render() {
         
         return (
-            <div>
-                <form action="" onSubmit={this.handleSubmit}>
+            <div >
+                <form action="" onSubmit={this.handleSubmit} className ="newtodoform">
                     <label htmlFor="todoItem">New Todo</label>
                     <input
                         id="todoItem"

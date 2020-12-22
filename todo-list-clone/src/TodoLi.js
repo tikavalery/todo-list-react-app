@@ -52,26 +52,30 @@ class TodoLi extends Component{
         if (this.state.isEditing) {
             display = 
                 <div className="todoli-edit">
-                    <form action="" onSubmit={this.handleUpdate}>
+                    <form onSubmit={this.handleUpdate} className="todoli-edit-form">
                     <input type="text"
                         id="itemss"
                         name="itemss"
                         onChange={this.handleChange}
                         value={this.state.itemss.item} />
                    
-                    <button>submit Change</button>
+                    <button>SAVE</button>
                 </form>
             </div>
             
         } else {
-           display =  <div className="todoli-display">
-           <span className="todoli-display-content">
-              <ul>
-               <li className={complet} onClick={this.handleComplete}>{ this.props.item}</li>
-              </ul>
-               </span>
-               <button className="todoli-display-delete" onClick={this.handleRemove}>delete</button>
-            <button className="todoli-display-edit" onClick={this.toggleEdit}>edit</button>
+            display = <div className="todoli-display">
+                <div className="todoli-display-content">
+                     <p className={complet} onClick={this.handleComplete}>{ this.props.item}</p>
+                    
+                     
+               </div>
+                <div className="todoli-display-buttons">
+                 <button className="todoli-display-buttons-edit" onClick={this.toggleEdit}><i class="fas fa-pen" /></button>
+                <button className="todoli-display-buttons-delete" onClick={this.handleRemove}><i class="fas fa-trash"/></button>
+                
+               </div>
+               
        </div>
         }
         return (
